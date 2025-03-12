@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome, {{ account.customer_name }}</h1>
+    <h2>Account Number: {{ account.account_number }}</h2>
+    <h2>Balance: Rs.{{ account.balance }}</h2>
+
+    <h3>{{ message }}</h3>
+
+</body>
+</html>
