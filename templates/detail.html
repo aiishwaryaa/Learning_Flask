@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .title-box {
+            border: 3px solid brown;
+            width: 300px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .post-details {
+            width: 80%;
+            max-width: 800px;
+            border: 1px solid brown;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .comments-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .comment-box {
+            border: 1px solid brown;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: left;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .comment-box h3 {
+            color: brown;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title-box"><h1>POST DETAILS</h1></div>
+    <br>
+
+    <div class="post-details">
+        <h2>{{ post_id }}</h2>
+        <h3>{{ message }}</h3>
+    </div>
+    <br>
+
+    <div class="title-box"><h2>COMMENTS</h2></div>
+    <br>
+
+    <div class="comments-container">
+        {% for x in comment_list %}
+        <div class="comment-box">
+            <strong>Name:</strong> {{ x.name }} <br>
+            <strong>Email:</strong> {{ x.email }} <br>
+            <h3>{{ x.body }}</h3>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
